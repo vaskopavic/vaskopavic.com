@@ -1,0 +1,34 @@
+---
+import { IoLogoGithub } from "react-icons/io5";
+
+import ThemeToggle from "./toggle-theme";
+import DropdownMenu from "./dropdown-menu";
+---
+
+<header class="sticky w-full p-3 md:p-6 z-20 backdrop-blur-md">
+  <div class="mx-auto container">
+    <nav class="flex items-center justify-between text-base">
+      <a href="/">
+        <h2 class="text-4xl">Vasko Pavic</h2>
+      </a>
+      <div
+        class="items-center justify-end grow gap-8 text-xl hidden md:flex mr-16"
+      >
+        <a href="/projects">Projects</a>
+        <a href="/blog">Blog</a>
+        <a
+          class="inline-flex items-center gap-1"
+          href="https://github.com/vaskopavic/vaskopavic.com"
+          target="_blank"
+        >
+          <IoLogoGithub />
+          <span>Source</span>
+        </a>
+      </div>
+      <div class="inline-flex gap-2">
+        <ThemeToggle client:only="react" />
+        <DropdownMenu client:only="react" />
+      </div>
+    </nav>
+  </div>
+</header>
