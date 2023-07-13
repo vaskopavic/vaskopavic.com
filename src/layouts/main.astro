@@ -1,0 +1,27 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+
+const pageTitle = title ? `Vasko Pavic - ${title}` : "Vasko Pavic";
+const pageDescription = description || "Full-stack developer based in Skopje!";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={pageDescription} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <body class="min-h-screen overflow-x-hidden">
+    <main class="container mx-auto">
+      <slot />
+    </main>
+  </body>
+</html>
