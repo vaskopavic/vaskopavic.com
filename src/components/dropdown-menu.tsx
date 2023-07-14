@@ -4,13 +4,22 @@ import { IoMenu } from "react-icons/io5";
 
 import DropdownMenuItem from "./dropdown-menu-item";
 
-const DropdownMenu = () => {
+interface Route {
+  href: string;
+  title: string;
+}
+
+interface Props {
+  routes: Route[];
+}
+
+const DropdownMenu = (routes: Props) => {
   return (
     <Menu as="div" className="relative inline-block text-left md:hidden">
       <div>
         <Menu.Button
-          className="inline-flex justify-center rounded-md border border-zinc-400 dark:border-zinc-700 px-2 py-2 text-sm font-medium shadow-sm hover:bg-orange-200 dark:hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100 transition-all"
-          aria-label="menu"
+          className="inline-flex justify-center rounded-md border border-zinc-400 dark:border-zinc-700 px-2 py-2 text-sm font-medium shadow-sm hover:bg-orange-200 dark:hover:bg-zinc-800 transition-all"
+          aria-label="Menu button"
         >
           <IoMenu className="h-5 w-5" />
         </Menu.Button>
@@ -30,8 +39,11 @@ const DropdownMenu = () => {
             <div className="px-3 py-2 uppercase font-bold text-xs">
               Navigation
             </div>
-            <DropdownMenuItem href="/projects">Projects</DropdownMenuItem>
-            <DropdownMenuItem href="/blog">Blog</DropdownMenuItem>
+            {routes.routes.map((route: any) => (
+              <DropdownMenuItem href={route.href}>
+                {route.title}
+              </DropdownMenuItem>
+            ))}
             <DropdownMenuItem
               href="https://github.com/vaskopavic/vaskopavic.com"
               target="_blank"

@@ -3,6 +3,8 @@ import { IoLogoGithub } from "react-icons/io5";
 
 import ThemeToggle from "./toggle-theme";
 import DropdownMenu from "./dropdown-menu";
+
+import { ROUTES, GITHUB_REPO } from "../constants";
 ---
 
 <header class="sticky w-full p-3 md:p-6 z-20 backdrop-blur-md">
@@ -14,11 +16,10 @@ import DropdownMenu from "./dropdown-menu";
       <div
         class="items-center justify-end grow gap-8 text-xl hidden md:flex mr-16"
       >
-        <a href="/projects">Projects</a>
-        <a href="/blog">Blog</a>
+        {ROUTES.map((route: any) => <a href={route.href}>{route.title}</a>)}
         <a
           class="inline-flex items-center gap-1"
-          href="https://github.com/vaskopavic/vaskopavic.com"
+          href={GITHUB_REPO}
           target="_blank"
         >
           <IoLogoGithub />
@@ -26,8 +27,8 @@ import DropdownMenu from "./dropdown-menu";
         </a>
       </div>
       <div class="inline-flex gap-2">
-        <ThemeToggle client:only="react" />
-        <DropdownMenu client:only="react" />
+        <ThemeToggle client:load />
+        <DropdownMenu client:visible routes={ROUTES} />
       </div>
     </nav>
   </div>

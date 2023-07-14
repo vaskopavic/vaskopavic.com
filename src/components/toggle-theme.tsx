@@ -1,32 +1,26 @@
 import { useEffect, useState } from "react";
 import { IoSunny, IoMoon } from "react-icons/io5";
+import { twMerge } from "tailwind-merge";
 
 const themes = ["light", "dark"];
 
 const ThemeToggle = () => {
   const [isMounted, setIsMounted] = useState(false);
-  const [theme, setTheme] = useState(() => {
-    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
-      return localStorage.getItem("theme");
-    }
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      return "dark";
-    }
-    return "light";
-  });
+  const [theme, setTheme] = useState(localStorage.getItem("theme") ?? "light");
+
   const toggleTheme = () => {
-    const t = theme === "light" ? "dark" : "light";
-    localStorage.setItem("theme", t);
-    setTheme(t);
+    setTheme(theme === "light" ? "dark" : "light");
   };
 
   useEffect(() => {
     const root = document.documentElement;
-    if (theme === "light") {
-      root.classList.remove("dark");
-    } else {
+
+    if (theme === "dark") {
       root.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
     }
+    localStorage.setItem("theme", theme);
   }, [theme]);
 
   useEffect(() => {
@@ -40,9 +34,10 @@ const ThemeToggle = () => {
         return (
           <button
             key={t}
-            className={`${
-              checked ? "bg-white text-black" : ""
-            } cursor-pointer rounded-3xl p-2`}
+            className={twMerge(
+              checked ? "bg-white text-black" : "",
+              "cursor-pointer rounded-3xl p-2"
+            )}
             onClick={toggleTheme}
             aria-label="Toggle theme"
           >
