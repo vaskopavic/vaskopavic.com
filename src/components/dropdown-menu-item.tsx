@@ -1,23 +1,20 @@
 import { Menu } from "@headlessui/react";
 import { twMerge } from "tailwind-merge";
 
-interface Props {
+interface Props extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   children: React.ReactNode;
-  href: string;
-  target?: string;
 }
 
-const DropdownMenuItem = ({ children, href, target }: Props) => {
+const DropdownMenuItem = ({ children, ...props }: Props) => {
   return (
     <Menu.Item>
       {({ active }) => (
         <a
-          href={href}
-          target={target}
           className={twMerge(
-            active ? "bg-orange-200 dark:bg-zinc-700" : "",
+            active ? "bg-emphasis dark:bg-emphasis-dark" : "",
             "block px-4 py-2 text-sm"
           )}
+          {...props}
         >
           {children}
         </a>

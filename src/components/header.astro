@@ -7,12 +7,10 @@ import DropdownMenu from "./dropdown-menu";
 import { ROUTES, GITHUB_REPO } from "../constants";
 ---
 
-<header class="sticky w-full p-3 md:p-6 z-20 backdrop-blur-md">
+<header class="sticky top-0 w-full p-3 md:p-6 z-20 backdrop-blur-md">
   <div class="mx-auto container">
-    <nav class="flex items-center justify-between text-base">
-      <a href="/">
-        <h2 class="text-4xl">Vasko Pavic</h2>
-      </a>
+    <nav class="flex items-center justify-between gap-4">
+      <a href="/" class="font-heading text-4xl">Vasko Pavic</a>
       <div
         class="items-center justify-end grow gap-8 text-xl hidden md:flex mr-16"
       >
@@ -26,7 +24,7 @@ import { ROUTES, GITHUB_REPO } from "../constants";
           <span>Source</span>
         </a>
       </div>
-      <div class="inline-flex gap-2">
+      <div class="flex gap-2">
         <ThemeToggle client:load />
         <DropdownMenu client:visible routes={ROUTES} />
       </div>

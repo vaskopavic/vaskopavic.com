@@ -28,14 +28,14 @@ const ThemeToggle = () => {
   }, []);
 
   return isMounted ? (
-    <div className="inline-block items-center p-[1px] rounded-3xl bg-orange-300 dark:bg-zinc-600">
+    <div className="inline-flex items-center p-[1px] rounded-3xl  bg-emphasis dark:bg-emphasis-dark">
       {themes.map((t) => {
         const checked = t === theme;
         return (
           <button
             key={t}
             className={twMerge(
-              checked ? "bg-white text-black" : "",
+              checked ? "bg-primary text-zinc-900" : "",
               "cursor-pointer rounded-3xl p-2"
             )}
             onClick={toggleTheme}
