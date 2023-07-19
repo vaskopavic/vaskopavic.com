@@ -1,0 +1,19 @@
+---
+import { IoChevronForward } from "react-icons/io5";
+
+interface Props {
+  category: string;
+  title: string;
+}
+
+const { category, title } = Astro.props;
+const href = category === "Projects" ? "/projects" : "/blog";
+---
+
+<div class="my-4 flex items-center gap-1">
+  <a href="/" class="underline underline-offset-2">Index</a>
+  <IoChevronForward className="opacity-50" />
+  <a href={href} class="underline underline-offset-2">{category}</a>
+  <IoChevronForward className="opacity-50" />
+  <span class="text-accent dark:text-accent-dark font-bold">{title}</span>
+</div>

@@ -25,6 +25,10 @@ module.exports = {
           hover: "#ebdbff",
           "hover-dark": "#3d2f51",
         },
+        accent: {
+          DEFAULT: "#ae88b8",
+          dark: "#6d63a6",
+        },
       },
       fontFamily: {
         sans: ["Montserrat Regular", ...defaultTheme.fontFamily.sans],
