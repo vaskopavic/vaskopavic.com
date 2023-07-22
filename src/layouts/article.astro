@@ -1,11 +1,14 @@
 ---
 import "@/styles/global.css";
 
+import { IoGlobeOutline, IoLogoGithub } from "react-icons/io5";
+
 import Body from "@/components/body.astro";
 import Header from "@/components/header.astro";
-import Container from "@/components/container.astro";
 import Breadcrumb from "@/components/breadcrumb.astro";
 import Footer from "@/components/footer.astro";
+
+import { timestampToDDMMYYYY } from "@/utils/date";
 
 const { frontmatter } = Astro.props;
 
@@ -25,41 +28,87 @@ const pageDescription =
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
   </head>
-  <Body>
+  <Body justify>
     <Header />
     <main>
-      <Container>
-        <article class="px-8 pt-4 mx-auto max-w-3xl">
-          <Breadcrumb
-            category={frontmatter.category}
-            title={frontmatter.title}
-          />
-          <div class="mb-8">
-            {
-              frontmatter.thumbnail && (
-                <>
-                  <img
-                    class="border border-slate-300 dark:border-zinc-700 rounded-xl"
-                    width={720}
-                    height={360}
-                    src={frontmatter.thumbnail}
-                    alt="Thumbnail image"
-                  />
-                </>
-              )
-            }
-          </div>
-          <h1 class="text-4xl my-1">{frontmatter.title}</h1>
-          <div class="font-light">{frontmatter.description}</div>
-          <hr class="border-zinc-400 my-4" />
-          <div class="text-justify">
-            <slot />
-          </div>
-        </article>
-      </Container>
+      <article class="p-3 mx-auto max-w-3xl">
+        <Breadcrumb category={frontmatter.category} title={frontmatter.title} />
+        <div class="mb-8">
+          {
+            frontmatter.thumbnail && (
+              <img
+                class="border border-slate-300 dark:border-zinc-700 rounded-xl w-full"
+                width={720}
+                height={360}
+                src={frontmatter.thumbnail}
+                alt="Thumbnail image"
+              />
+            )
+          }
+        </div>
+        {
+          frontmatter.category === "Projects" ? (
+            <div class="flex items-center gap-2">
+              <h1 class="text-4xl my-2 mr-2">{frontmatter.title}</h1>
+              {frontmatter.previewUrl && (
+                <a
+                  href={frontmatter.previewUrl}
+                  target="_blank"
+                  class="hover:text-accent dark:hover:text-accent-dark text-2xl"
+                >
+                  <IoGlobeOutline />
+                </a>
+              )}
+              {frontmatter.sourceUrl && (
+                <a
+                  href={frontmatter.sourceUrl}
+                  target="_blank"
+                  class="hover:text-accent dark:hover:text-accent-dark text-2xl"
+                >
+                  <IoLogoGithub />
+                </a>
+              )}
+            </div>
+          ) : (
+            <h1 class="text-4xl my-2">{frontmatter.title}</h1>
+          )
+        }
+        {
+          frontmatter.category === "Projects" ? (
+            <div class="font-light">{frontmatter.description}</div>
+          ) : (
+            <div class="font-light">
+              {timestampToDDMMYYYY(frontmatter.createdAt)}
+            </div>
+          )
+        }
+        <hr class="border-zinc-400 my-4" />
+        <div class="text-justify">
+          <slot />
+        </div>
+      </article>
     </main>
     <Footer />
   </Body>
+  <script is:inline>
+    const theme = (() => {
+      if (
+        typeof localStorage !== "undefined" &&
+        localStorage.getItem("theme")
+      ) {
+        return localStorage.getItem("theme");
+      }
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        return "dark";
+      }
+      return "light";
+    })();
 
-
+    if (theme === "light") {
+      document.documentElement.classList.remove("dark");
+    } else {
+      document.documentElement.classList.add("dark");
+    }
+    window.localStorage.setItem("theme", theme);
+  </script>
 </html>

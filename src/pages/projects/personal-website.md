@@ -4,6 +4,7 @@ description: Lorem ipsum dolor sit amet
 layout: "@/layouts/article.astro"
 thumbnail: /projects/personal-website_thumbnail.jpg
 category: Projects
+sourceUrl: "https://github.com/vaskopavic/vaskopavic.com"
 createdAt: 1689202800
 ---
 

@@ -4,6 +4,8 @@ description: Lorem ipsum dolor sit amet
 layout: "@/layouts/article.astro"
 thumbnail: /projects/jollybyte_thumbnail.jpg
 category: Projects
+previewUrl: "https://jollybyte.vercel.app/"
+sourceUrl: "https://github.com/vaskopavic/jollybyte"
 createdAt: 1670799600
 ---
 
