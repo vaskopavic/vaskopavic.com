@@ -21,7 +21,6 @@ export default defineConfig({
           p: "mb-4",
           a: "underline underline-offset-2 hover:text-accent dark:hover:text-accent-dark decoration-accent dark:decoration-accent-dark",
           ul: "list-disc",
-          pre: "rounded-xl p-4",
         },
       ],
     ],
