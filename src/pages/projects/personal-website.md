@@ -1,6 +1,6 @@
 ---
 title: Personal Website
-description: Lorem ipsum dolor sit amet
+description: This website is a reflection of my journey in the world of software development and a showcase of my projects, skills, and experiences.
 layout: "@/layouts/article.astro"
 thumbnail: /projects/personal-website_thumbnail.jpg
 category: Projects
@@ -8,4 +8,4 @@ sourceUrl: "https://github.com/vaskopavic/vaskopavic.com"
 createdAt: 1689202800
 ---
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem corporis autem ducimus deleniti, facilis fuga accusantium, voluptatem molestiae voluptate maiores, molestias perferendis praesentium culpa dolorum eius mollitia architecto. Iusto, eligendi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, sint maxime voluptate perferendis quidem laborum dolor corporis magni deserunt nemo qui.
+As a developer, I believe in the power of simplicity and clean design. Therefore, this website is designed to be user-friendly and responsive across different devices. I've poured my heart and soul into creating this platform, and I hope it serves as an inspiration for others and a way to connect with like-minded individuals.

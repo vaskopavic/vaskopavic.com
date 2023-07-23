@@ -11,9 +11,17 @@ const href = category === "Projects" ? "/projects" : "/blog";
 ---
 
 <div class="my-4 flex items-center gap-1">
-  <a href="/" class="underline underline-offset-2">Index</a>
+  <a
+    href="/"
+    class="underline underline-offset-2 hover:text-accent dark:hover:text-accent-dark decoration-accent dark:decoration-accent-dark"
+    >Index</a
+  >
   <IoChevronForward className="opacity-50" />
-  <a href={href} class="underline underline-offset-2">{category}</a>
+  <a
+    href={href}
+    class="underline underline-offset-2 hover:text-accent dark:hover:text-accent-dark decoration-accent dark:decoration-accent-dark"
+    >{category}</a
+  >
   <IoChevronForward className="opacity-50" />
   <span class="text-accent dark:text-accent-dark font-bold">{title}</span>
 </div>

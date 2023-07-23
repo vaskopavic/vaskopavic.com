@@ -26,8 +26,8 @@ module.exports = {
           "hover-dark": "#3d2f51",
         },
         accent: {
-          DEFAULT: "#ae88b8",
-          dark: "#6d63a6",
+          DEFAULT: "#6d63a6",
+          dark: "#ae88b8",
         },
       },
       fontFamily: {

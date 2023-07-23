@@ -4,12 +4,12 @@ description: Learn how to leverage sessions in NestJS using the 'express-session
 layout: "@/layouts/article.astro"
 thumbnail: /blog/nestjs_thumbnail.jpg
 category: Blog
-createdAt: 1678057200
+createdAt: 1690066800
 ---
 
 ## Introduction
 
-Sessions are crucial for dynamic and secure web applications, providing personalized experiences, data retention, and enhanced security. In this article, we'll explore the significance of sessions in web development and how to set them up in a NestJS project using the express-session package.
+In this article, we'll explore the significance of sessions in web development and how to set them up in a NestJS project using the express-session package.
 
 ## Why Sessions Matter
 

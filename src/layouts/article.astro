@@ -75,7 +75,7 @@ const pageDescription =
         }
         {
           frontmatter.category === "Projects" ? (
-            <div class="font-light">{frontmatter.description}</div>
+            <div class="font-light text-justify">{frontmatter.description}</div>
           ) : (
             <div class="font-light">
               {timestampToDDMMYYYY(frontmatter.createdAt)}
