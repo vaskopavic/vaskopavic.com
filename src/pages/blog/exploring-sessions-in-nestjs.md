@@ -1,6 +1,6 @@
 ---
 title: Exploring Sessions in NestJS
-description: Learn how to leverage sessions in NestJS using the 'express-session' package to enhance user authentication, store user-specific data, prevent data loss, and ensure security in your applications. Follow along as we set up a session middleware and demonstrate the importance of sessions with a real-world example.
+description: Unravel the power of NestJS sessions using the 'express-session' package. Elevate user authentication, secure data storage, and prevent loss in your apps.
 layout: "@/layouts/article.astro"
 thumbnail: /blog/nestjs_thumbnail.jpg
 category: Blog
@@ -34,7 +34,7 @@ Now that we've grasped the significance of sessions, let's dive into the practic
 Open your terminal and run the following command within your NestJS project:
 
 ```bash
-npm i express-session
+yarn add express-session
 ```
 
 ### 2. Set up the session middleware

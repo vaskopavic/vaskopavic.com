@@ -1,6 +1,6 @@
 ---
 title: Personal Website
-description: This website is a reflection of my journey in the world of software development and a showcase of my projects, skills, and experiences.
+description: Explore my software development journey, projects, skills, and experiences. Built with the magic of Astro, React, and TailwindCSS.
 layout: "@/layouts/article.astro"
 thumbnail: /projects/personal-website_thumbnail.jpg
 category: Projects

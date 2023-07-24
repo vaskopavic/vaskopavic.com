@@ -1,8 +1,7 @@
 ---
-import "@/styles/global.css";
-
 import { IoGlobeOutline, IoLogoGithub } from "react-icons/io5";
 
+import Metadata from "@/components/metadata.astro";
 import Body from "@/components/body.astro";
 import Header from "@/components/header.astro";
 import Breadcrumb from "@/components/breadcrumb.astro";
@@ -11,22 +10,19 @@ import Footer from "@/components/footer.astro";
 import { timestampToDDMMYYYY } from "@/utils/date";
 
 const { frontmatter } = Astro.props;
-
-const pageTitle = frontmatter.title
-  ? `Vasko Pavic - ${frontmatter.title}`
-  : "Vasko Pavic";
-const pageDescription =
-  frontmatter.description || "Full-stack developer based in Skopje!";
 ---
 
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={pageDescription} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <Metadata
+      title={frontmatter.title}
+      description={frontmatter.description}
+      image={frontmatter.thumbnail}
+    />
   </head>
   <Body justify>
     <Header />
@@ -83,32 +79,11 @@ const pageDescription =
           )
         }
         <hr class="border-zinc-400 my-4" />
-        <div class="text-justify">
+        <div class="text-justify list-disc">
           <slot />
         </div>
       </article>
     </main>
     <Footer />
   </Body>
-  <script is:inline>
-    const theme = (() => {
-      if (
-        typeof localStorage !== "undefined" &&
-        localStorage.getItem("theme")
-      ) {
-        return localStorage.getItem("theme");
-      }
-      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-        return "dark";
-      }
-      return "light";
-    })();
-
-    if (theme === "light") {
-      document.documentElement.classList.remove("dark");
-    } else {
-      document.documentElement.classList.add("dark");
-    }
-    window.localStorage.setItem("theme", theme);
-  </script>
 </html>

@@ -1,6 +1,6 @@
 ---
 title: Jollybyte
-description: A fictitious fast-food chain, serving delicious meals with a side of happiness. This project is the result of our team's hard work and creativity during a 5-day ReactJS workshop.
+description: Discover Jollybyte, a fictional fast-food chain serving delicious meals with a side of happiness, created during a 5-day React workshop.
 layout: "@/layouts/article.astro"
 thumbnail: /projects/jollybyte_thumbnail.jpg
 category: Projects
@@ -9,7 +9,7 @@ sourceUrl: "https://github.com/vaskopavic/jollybyte"
 createdAt: 1670799600
 ---
 
-Welcome to the Jollybyte project! As a developer, this was an exhilarating journey that pushed our skills to the limit. We embarked on this adventure during a 5-day ReactJS workshop, and let me tell you, it was a whirlwind of creativity, coding, and collaboration.
+Welcome to the enchanting world of Jollybyte, a delightful fictional fast-food chain that offers delectable meals paired with a generous serving of happiness. Our journey as developers has been nothing short of exhilarating, pushing our skills to new heights during a captivating 5-day React workshop. The experience was a whirlwind of creativity, coding, and seamless collaboration. Step right in and embark on this exciting adventure with us!
 
 Working alongside my talented teammates, [Natali Talevska](https://www.linkedin.com/in/natali-talevska/) (the designer extraordinaire) and [Marko Spasenovski](https://www.linkedin.com/in/marko-spasenovski/) (the brilliant developer), we set out to bring the fictitious fast-food chain, Jollybyte, to life on the web. The pressure was on, but we thrived on the challenge.
 

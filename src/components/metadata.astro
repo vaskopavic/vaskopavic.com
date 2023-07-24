@@ -1,0 +1,61 @@
+---
+import "@/styles/global.css";
+
+import { SEO } from "astro-seo";
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+
+const {
+  title,
+  description = "Full-stack developer based in Skopje, passionate about tech trends with a design-driven and collaborative approach.",
+  image = new URL("/og-image.jpg", Astro.site).toString(),
+} = Astro.props;
+
+const makeTitle = title ? `${title} - Vasko Pavic` : "Vasko Pavic";
+---
+
+<SEO
+  title={makeTitle}
+  description={description}
+  canonical={canonicalURL}
+  twitter={{
+    creator: "@vaskopavic",
+    site: "@vaskopavic",
+    card: "summary_large_image",
+  }}
+  openGraph={{
+    basic: {
+      url: canonicalURL,
+      type: "website",
+      title: makeTitle,
+      image: image,
+    },
+    image: {
+      alt: "Vasko Pavic's website",
+    },
+  }}
+/>
+<script is:inline>
+  const theme = (() => {
+    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+      return localStorage.getItem("theme");
+    }
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    }
+    return "light";
+  })();
+
+  if (theme === "light") {
+    document.documentElement.classList.remove("dark");
+  } else {
+    document.documentElement.classList.add("dark");
+  }
+  window.localStorage.setItem("theme", theme);
+</script>
