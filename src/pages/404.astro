@@ -1,0 +1,21 @@
+---
+import Layout from "@/layouts/main.astro";
+import Container from "@/components/container.astro";
+import Button from "@/components/button.astro";
+import Cat from "@/components/cat.astro";
+---
+
+<Layout>
+  <Container>
+    <div class="flex flex-col md:flex-row items-center gap-4">
+      <div class="flex flex-col items-center">
+        <h1 class="text-8xl md:text-9xl mb-6">404</h1>
+        <h1 class="text-5xl md:text-6xl text-center mb-6">
+          Oops! Cat-egory Not Found
+        </h1>
+        <Button as="a" href="/" class="w-full my-4">Pspspsps!</Button>
+      </div>
+      <Cat />
+    </div>
+  </Container>
+</Layout>
