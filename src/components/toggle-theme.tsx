@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { IoSunny, IoMoon } from "react-icons/io5";
+import { IoSunny, IoMoon } from "react-icons/io5/index.js";
 import { twMerge } from "tailwind-merge";
 
 const themes = ["light", "dark"];
