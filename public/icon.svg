@@ -1,15 +1,4 @@
----
-interface Props {
-  width?: number;
-  height?: number;
-}
-
-const { width = 39.98, height = 45.6 } = Astro.props;
----
-
 <svg
-  width={width}
-  height={height}
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 1000 1140"
   fill="currentColor"
@@ -38,4 +27,10 @@ const { width = 39.98, height = 45.6 } = Astro.props;
 		h-31.51v31.51h27.35c0.43,3.64-0.59,6.74-3.07,9.28C990.05,296.89,986.24,298.23,980.26,298.39L980.26,298.39z"
     ></path>
   </g>
+    <style>
+        path { fill: #000; }
+        @media (prefers-color-scheme: dark) {
+            path { fill: #FFF; }
+        }
+    </style>
 </svg>
