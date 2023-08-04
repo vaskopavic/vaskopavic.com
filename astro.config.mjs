@@ -5,7 +5,7 @@ import addClasses from "rehype-add-classes";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://www.vaskopavic.com",
+  site: "https://vaskopavic.com",
   integrations: [tailwind(), react()],
   markdown: {
     rehypePlugins: [
@@ -21,7 +21,6 @@ export default defineConfig({
           img: "border border-slate-300 dark:border-zinc-700 rounded-xl mb-6",
           p: "mb-4",
           a: "underline underline-offset-2 hover:text-accent dark:hover:text-accent-dark decoration-accent dark:decoration-accent-dark",
-          ul: "list-disc",
         },
       ],
     ],

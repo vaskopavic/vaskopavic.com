@@ -40,8 +40,6 @@ const { frontmatter } = Astro.props;
             frontmatter.thumbnail && (
               <img
                 class="border border-slate-300 dark:border-zinc-700 rounded-xl w-full"
-                width={720}
-                height={360}
                 src={frontmatter.thumbnail}
                 alt="Thumbnail image"
               />
@@ -85,7 +83,7 @@ const { frontmatter } = Astro.props;
           )
         }
         <hr class="border-zinc-400 my-4" />
-        <div class="text-justify list-disc">
+        <div class="text-justify">
           <slot />
         </div>
       </article>

@@ -23,7 +23,7 @@ const posts = (await Astro.glob("./blog/*.md")).sort(
             <li class="text-center mb-4">
               <a href={post.url}>
                 <img
-                  class="border border-slate-300 dark:border-zinc-700 rounded-xl"
+                  class="border border-slate-300 dark:border-zinc-700 rounded-xl w-full"
                   src={post.frontmatter.thumbnail}
                   alt="Thumbnail image"
                 />
