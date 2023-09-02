@@ -3,6 +3,7 @@ title: Jollybyte
 description: Discover Jollybyte, a fictional fast-food chain serving delicious meals with a side of happiness, created during a 5-day React workshop.
 layout: "@/layouts/article.astro"
 thumbnail: /projects/jollybyte_thumbnail.jpg
+alt: "Image of Jollybyte's website homepage"
 category: Projects
 previewUrl: "https://jollybyte.vercel.app/"
 sourceUrl: "https://github.com/vaskopavic/jollybyte"

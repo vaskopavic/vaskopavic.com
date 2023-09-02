@@ -8,6 +8,7 @@ import Breadcrumb from "@/components/breadcrumb.astro";
 import Footer from "@/components/footer.astro";
 
 import { timestampToDDMMYYYY } from "@/utils/date";
+import { ViewTransitions } from 'astro:transitions';
 
 const { frontmatter } = Astro.props;
 ---
@@ -30,6 +31,7 @@ const { frontmatter } = Astro.props;
       description={frontmatter.description}
       image={frontmatter.thumbnail}
     />
+    <ViewTransitions fallback="animate" />
   </head>
   <Body justify>
     <Header />
@@ -42,7 +44,8 @@ const { frontmatter } = Astro.props;
               <img
                 class="border border-slate-300 dark:border-zinc-700 rounded-xl w-full"
                 src={frontmatter.thumbnail}
-                alt="Thumbnail image"
+                alt={frontmatter.alt}
+                transition:name="fade-thumbnail"
               />
             )
           }

@@ -25,7 +25,8 @@ const posts = (await Astro.glob("./blog/*.md")).sort(
                 <img
                   class="border border-slate-300 dark:border-zinc-700 rounded-xl w-full"
                   src={post.frontmatter.thumbnail}
-                  alt="Thumbnail image"
+                  alt={post.frontmatter.alt}
+                  transition:name="fade-thumbnail"
                 />
                 <div class="mt-3 text-xl">{post.frontmatter.title}</div>
               </a>

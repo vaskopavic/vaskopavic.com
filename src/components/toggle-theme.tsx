@@ -6,10 +6,16 @@ const themes = ["light", "dark"];
 
 const ThemeToggle = () => {
   const [isMounted, setIsMounted] = useState(false);
-  const [theme, setTheme] = useState(localStorage.getItem("theme") ?? "light");
+  const [theme, setTheme] = useState(() => {
+    if (typeof window !== "undefined") {
+      const storedTheme = localStorage.getItem("theme");
+      return storedTheme ?? "light";
+    }
+    return "light";
+  });
 
   const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
 
   useEffect(() => {
@@ -20,7 +26,10 @@ const ThemeToggle = () => {
     } else {
       root.classList.remove("dark");
     }
-    localStorage.setItem("theme", theme);
+
+    if (typeof window !== "undefined") {
+      localStorage.setItem("theme", theme);
+    }
   }, [theme]);
 
   useEffect(() => {
