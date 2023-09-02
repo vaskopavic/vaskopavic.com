@@ -30,7 +30,7 @@ import { ROUTES, GITHUB_REPO } from "../constants";
         </a>
       </div>
       <div class="flex gap-2">
-        <ThemeToggle client:load />
+        <ThemeToggle client:only="react" />
         <DropdownMenu client:visible routes={ROUTES} />
       </div>
     </nav>
