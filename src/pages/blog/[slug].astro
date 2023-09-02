@@ -1,0 +1,54 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content'
+import { Image } from 'astro:assets'
+
+import Layout from '@/layouts/article.astro'
+
+import { timestampToDDMMYYYY } from '@/utils/date'
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog')
+
+  return posts.map((post) => {
+    return {
+      params: {
+        slug: post.slug,
+      },
+      props: {
+        post,
+      },
+    }
+  })
+}
+
+interface Props {
+  post: CollectionEntry<'blog'>
+}
+
+const { post } = Astro.props
+const { Content } = await post.render()
+---
+
+<Layout
+  title={post.data.title}
+  description={post.data.description}
+  image={post.data.cover.toString()}
+  category={post.data.category}
+>
+  <div class='mb-8'>
+    <Image
+      class='border border-slate-300 dark:border-zinc-700 rounded-xl w-full'
+      src={post.data.cover}
+      alt={post.data.coverAlt}
+      transition:name='fade-thumbnail'
+    />
+  </div>
+  <h1 class='text-4xl my-2'>{post.data.title}</h1>
+  <div class='font-light'>
+    {timestampToDDMMYYYY(post.data.createdAt)}
+  </div>
+  <hr class='border-zinc-400 my-4' />
+  <div class='text-justify'>
+    <Content />
+  </div>
+</Layout>

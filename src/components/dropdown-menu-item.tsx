@@ -12,7 +12,7 @@ const DropdownMenuItem = ({ children, ...props }: Props) => {
         <a
           className={twMerge(
             active ? "bg-emphasis dark:bg-emphasis-dark" : "",
-            "block px-4 py-2 text-sm"
+            "block px-4 py-2 text-sm",
           )}
           {...props}
         >

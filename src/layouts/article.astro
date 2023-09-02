@@ -1,5 +1,5 @@
 ---
-import { IoGlobeOutline, IoLogoGithub } from 'react-icons/io5/index.js'
+import { ViewTransitions } from 'astro:transitions';
 
 import Metadata from "@/components/metadata.astro";
 import Body from "@/components/body.astro";
@@ -7,10 +7,14 @@ import Header from "@/components/header.astro";
 import Breadcrumb from "@/components/breadcrumb.astro";
 import Footer from "@/components/footer.astro";
 
-import { timestampToDDMMYYYY } from "@/utils/date";
-import { ViewTransitions } from 'astro:transitions';
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+  category: string;
+}
 
-const { frontmatter } = Astro.props;
+const { title, description, image, category } = Astro.props;
 ---
 
 <html lang="en">
@@ -27,9 +31,9 @@ const { frontmatter } = Astro.props;
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <Metadata
-      title={frontmatter.title}
-      description={frontmatter.description}
-      image={frontmatter.thumbnail}
+      title={title}
+      description={description}
+      image={image}
     />
     <ViewTransitions fallback="animate" />
   </head>
@@ -37,59 +41,8 @@ const { frontmatter } = Astro.props;
     <Header />
     <main>
       <article class="p-3 mx-auto max-w-3xl">
-        <Breadcrumb category={frontmatter.category} title={frontmatter.title} />
-        <div class="mb-8">
-          {
-            frontmatter.thumbnail && (
-              <img
-                class="border border-slate-300 dark:border-zinc-700 rounded-xl w-full"
-                src={frontmatter.thumbnail}
-                alt={frontmatter.alt}
-                transition:name="fade-thumbnail"
-              />
-            )
-          }
-        </div>
-        {
-          frontmatter.category === "Projects" ? (
-            <div class="flex items-center gap-2">
-              <h1 class="text-4xl my-2 mr-2">{frontmatter.title}</h1>
-              {frontmatter.previewUrl && (
-                <a
-                  href={frontmatter.previewUrl}
-                  target="_blank"
-                  class="hover:text-accent dark:hover:text-accent-dark text-2xl"
-                >
-                  <IoGlobeOutline />
-                </a>
-              )}
-              {frontmatter.sourceUrl && (
-                <a
-                  href={frontmatter.sourceUrl}
-                  target="_blank"
-                  class="hover:text-accent dark:hover:text-accent-dark text-2xl"
-                >
-                  <IoLogoGithub />
-                </a>
-              )}
-            </div>
-          ) : (
-            <h1 class="text-4xl my-2">{frontmatter.title}</h1>
-          )
-        }
-        {
-          frontmatter.category === "Projects" ? (
-            <div class="font-light text-justify">{frontmatter.description}</div>
-          ) : (
-            <div class="font-light">
-              {timestampToDDMMYYYY(frontmatter.createdAt)}
-            </div>
-          )
-        }
-        <hr class="border-zinc-400 my-4" />
-        <div class="text-justify">
+        <Breadcrumb category={category} title={title} />
           <slot />
-        </div>
       </article>
     </main>
     <Footer />

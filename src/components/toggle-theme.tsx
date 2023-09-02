@@ -37,7 +37,7 @@ const ThemeToggle = () => {
   }, []);
 
   return isMounted ? (
-    <div className="inline-flex items-center p-[1px] rounded-3xl  bg-emphasis dark:bg-emphasis-dark">
+    <div className='inline-flex items-center p-[1px] rounded-3xl  bg-emphasis dark:bg-emphasis-dark'>
       {themes.map((t) => {
         const checked = t === theme;
         return (
@@ -45,15 +45,15 @@ const ThemeToggle = () => {
             key={t}
             className={twMerge(
               checked ? "bg-primary text-zinc-900" : "",
-              "cursor-pointer rounded-3xl p-2"
+              "cursor-pointer rounded-3xl p-2",
             )}
             onClick={toggleTheme}
-            aria-label="Toggle theme"
+            aria-label='Toggle theme'
           >
             {t === "light" ? (
-              <IoSunny className="h-5 w-5" />
+              <IoSunny className='h-5 w-5' />
             ) : (
-              <IoMoon className="h-5 w-5" />
+              <IoMoon className='h-5 w-5' />
             )}
           </button>
         );
