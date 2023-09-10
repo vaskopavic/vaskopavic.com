@@ -1,12 +1,9 @@
 ---
-title: Exploring Sessions in NestJS
-description:
-  Unravel the power of NestJS sessions using the 'express-session' package.
-  Elevate user authentication, secure data storage, and prevent loss in your
-  apps.
+title: "Exploring Sessions in NestJS"
+description: "Unravel the power of NestJS sessions using the 'express-session' package. Elevate user authentication, secure data storage, and prevent loss in your apps."
 cover: "../../assets/blog/nestjs_thumbnail.jpg"
-coverAlt: "Image of a NestJS' logo with a cat in the background"
-category: Blog
+coverAlt: "Image of NestJS' logo with a cat in the background"
+category: "Blog"
 createdAt: 1690066800
 ---
 
@@ -21,25 +18,25 @@ Sessions are crucial for dynamic and secure web applications, providing
 personalized experiences, data retention, and enhanced security. Here's why
 they're so important:
 
-- User Authentication: Sessions keep track of authenticated users. Once you log
+- **User Authentication:** Sessions keep track of authenticated users. Once you log
   in, they remember you, so you don't have to keep logging in like a broken
   record.
 
-- Storing User-Specific Data: Sessions let web apps keep user-specific data
+- **Storing User-Specific Data:** Sessions let web apps keep user-specific data
   throughout the session, making it available across different pages. It's like
   having your personal assistant on the internet, ensuring you get a smooth and
   tailored user experience.
 
-- Preventing Data Loss: With sessions, your data takes a temporary staycation,
+- **Preventing Data Loss:** With sessions, your data takes a temporary staycation,
   so you don't lose it during your internet adventures. Navigate freely, click
   without fear—your precious work and settings are safe and sound.
 
-- Enhancing Performance: Sessions reduce the need to fetch data repeatedly from
+- **Enhancing Performance:** Sessions reduce the need to fetch data repeatedly from
   the server during your visit. It's like optimizing your web trip for speed and
   efficiency, resulting in snappy responses that'll make you go, "Wow, that's
   fast!"
 
-- Ensuring Security: Web security is no joke. Sessions play bouncer, making sure
+- **Ensuring Security:** Web security is no joke. Sessions play bouncer, making sure
   only legit requests get through to the server. They've got your back, using
   fancy techniques like session tokens and server-side validation to fend off
   nasty threats and malicious attacks.

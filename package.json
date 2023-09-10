@@ -10,9 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/react": "^2.2.1",
+    "@astrojs/react": "^3.0.2",
     "@astrojs/sitemap": "^2.0.1",
-    "@astrojs/tailwind": "^4.0.0",
+    "@astrojs/tailwind": "^5.0.0",
     "@headlessui/react": "^1.7.15",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
@@ -24,9 +24,5 @@
     "rehype-add-classes": "^1.0.0",
     "tailwind-merge": "^1.13.2",
     "tailwindcss": "^3.0.24"
-  },
-  "devDependencies": {
-    "prettier": "^3.0.3",
-    "prettier-plugin-astro": "^0.12.0"
   }
 }
