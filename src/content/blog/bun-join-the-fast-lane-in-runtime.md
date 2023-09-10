@@ -4,13 +4,12 @@ description: "Bun is changing the game for JavaScript developers. In this blog, 
 cover: "../../assets/blog/bun_thumbnail.jpg"
 coverAlt: "Image of Bun's logo over a background full of buns"
 category: "Blog"
-createdAt: 1694300400
+createdAt: 1694304000
 ---
 
 ## Meet Bun
 
 Bun is an all-in-one JavaScript runtime and toolkit, offering bundling, testing, and package management capabilities in a single package. If you're tired of juggling multiple tools to handle your JavaScript and TypeScript projects, Bun is here to simplify your workflow.
-
 
 ## Key Features
 

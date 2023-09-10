@@ -69,7 +69,7 @@ app.use(
     secret: "my-secret",
     resave: false,
     saveUninitialized: false,
-  }),
+  })
 );
 ```
 
