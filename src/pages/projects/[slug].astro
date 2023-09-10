@@ -32,7 +32,7 @@ const { Content } = await post.render()
 <Layout
   title={post.data.title}
   description={post.data.description}
-  image={post.data.cover.toString()}
+  image={post.data.cover.src}
   category={post.data.category}
 >
   <div class='mb-8'>
@@ -40,7 +40,7 @@ const { Content } = await post.render()
       class='border border-slate-300 dark:border-zinc-700 rounded-xl w-full'
       src={post.data.cover}
       alt={post.data.coverAlt}
-      transition:name='fade-thumbnail'
+      transition:name="fade-thumbnail"
     />
   </div>
   <div class='flex items-center gap-2'>
