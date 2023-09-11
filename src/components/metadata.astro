@@ -60,5 +60,5 @@ if (theme === "light") {
 
 window.localStorage.setItem("theme", theme);
 
-document.addEventListener("astro:after-swap", theme);
+document.addEventListener("astro:after-swap", () => theme);
 </script>

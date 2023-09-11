@@ -1,5 +1,5 @@
 ---
-import { IoChevronForward } from 'react-icons/io5/index.js'
+import { IoChevronForward } from "react-icons/io5/index.js";
 
 interface Props {
   category: string;
@@ -23,5 +23,7 @@ const href = category === "Projects" ? "/projects" : "/blog";
     >{category}</a
   >
   <IoChevronForward className="opacity-50" />
-  <span class="text-accent dark:text-accent-dark font-bold">{title}</span>
+  <span class="text-accent dark:text-accent-dark font-bold truncate"
+    >{title}</span
+  >
 </div>
