@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { IoSunny, IoMoon } from "react-icons/io5/index.js";
-import { twMerge } from "tailwind-merge";
 
 const themes = ["light", "dark"];
 
@@ -33,10 +32,9 @@ const ThemeToggle = () => {
         return (
           <button
             key={t}
-            className={twMerge(
-              checked ? "bg-primary text-zinc-900" : "",
-              "cursor-pointer rounded-3xl p-2"
-            )}
+            className={`cursor-pointer rounded-3xl p-2 ${
+              checked ? "bg-primary text-zinc-900" : ""
+            }`}
             onClick={toggleTheme}
             aria-label="Toggle theme"
           >

@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
+import { ViewTransitions } from "astro:transitions";
 
 import Metadata from "@/components/metadata.astro";
 import Body from "@/components/body.astro";
@@ -30,19 +30,15 @@ const { title, description, image, category } = Astro.props;
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <Metadata
-      title={title}
-      description={description}
-      image={image}
-    />
+    <Metadata title={title} description={description} image={image} />
     <ViewTransitions fallback="none" />
   </head>
-  <Body justify>
+  <Body class="flex flex-col justify-between">
     <Header />
     <main>
       <article class="p-3 mx-auto max-w-3xl">
         <Breadcrumb category={category} title={title} />
-          <slot />
+        <slot />
       </article>
     </main>
     <Footer />
