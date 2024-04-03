@@ -2,7 +2,7 @@
 import { getCollection, type CollectionEntry } from "astro:content";
 import { Image } from "astro:assets";
 
-import { IoGlobeOutline, IoLogoGithub } from "react-icons/io5/index.js";
+import { IoGlobeOutline, IoLogoGithub } from "react-icons/io5";
 
 import Layout from "@/layouts/article.astro";
 
@@ -40,6 +40,7 @@ const { Content } = await post.render();
       class="border border-slate-300 dark:border-zinc-700 rounded-xl w-full"
       src={post.data.cover}
       alt={post.data.coverAlt}
+      loading="eager"
       transition:name={`fade-thumbnail-${post.slug}`}
     />
   </div>
@@ -48,6 +49,7 @@ const { Content } = await post.render();
     <a
       href={post.data.previewUrl}
       target="_blank"
+      aria-label="Preview website"
       class="hover:text-accent dark:hover:text-accent-dark text-2xl"
     >
       <IoGlobeOutline />
@@ -55,6 +57,7 @@ const { Content } = await post.render();
     <a
       href={post.data.sourceUrl}
       target="_blank"
+      aria-label="Source code"
       class="hover:text-accent dark:hover:text-accent-dark text-2xl"
     >
       <IoLogoGithub />

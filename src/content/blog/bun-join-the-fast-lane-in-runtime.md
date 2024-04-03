@@ -2,7 +2,7 @@
 title: "Bun: Join the Fast Lane in Runtime"
 description: "Discover how Bun is changing the game for JavaScript developers with its exceptional features, comprehensive docs, and streamlined development experience."
 cover: "../../assets/blog/bun_thumbnail.jpg"
-coverAlt: "Image of Bun's logo over a background full of buns"
+coverAlt: "Bun's logo over a background"
 category: "Blog"
 createdAt: 1694304000
 ---

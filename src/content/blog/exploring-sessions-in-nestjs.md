@@ -2,7 +2,7 @@
 title: "Exploring Sessions in NestJS"
 description: "Unravel the power of NestJS sessions using the 'express-session' package. Elevate user authentication, secure data storage, and prevent loss in your apps."
 cover: "../../assets/blog/nestjs_thumbnail.jpg"
-coverAlt: "Image of NestJS' logo with a cat in the background"
+coverAlt: "NestJS' logo with a cat in the background"
 category: "Blog"
 createdAt: 1690066800
 ---

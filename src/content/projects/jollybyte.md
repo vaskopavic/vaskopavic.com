@@ -1,33 +1,18 @@
 ---
 title: "Jollybyte"
-description: "Discover Jollybyte, a fictional fast-food chain serving delicious meals with a side of happiness, created during a 5-day React workshop."
+description: "Introducing Jollybyte, a vibrant fast-food brand serving up mouthwatering delights alongside a hearty dose of joy."
 cover: "../../assets/projects/jollybyte_thumbnail.jpg"
-coverAlt: "Image of Jollybyte's website homepage"
+coverAlt: "Jollybyte's website homepage"
 category: "Projects"
 previewUrl: "https://jollybyte.vercel.app/"
 sourceUrl: "https://github.com/vaskopavic/jollybyte"
 createdAt: 1670799600
 ---
 
-Welcome to the enchanting world of Jollybyte, a delightful fictional fast-food
-chain that offers delectable meals paired with a generous serving of happiness.
-Our journey as developers has been nothing short of exhilarating, pushing our
-skills to new heights during a captivating 5-day React workshop. The experience
-was a whirlwind of creativity, coding, and seamless collaboration. Step right in
-and embark on this exciting adventure with us!
+Step into the captivating realm of Jollybyte, where flavor meets fun in every bite. Our journey has been a whirlwind of creativity and collaboration, culminating in the creation of this immersive web experience.
 
-Working alongside my talented teammates,
-[Natali Talevska](https://www.linkedin.com/in/natali-talevska/) (the designer
-extraordinaire) and
-[Marko Spasenovski](https://www.linkedin.com/in/marko-spasenovski/) (the
-brilliant developer), we set out to bring the fictitious fast-food chain,
-Jollybyte, to life on the web. The pressure was on, but we thrived on the
-challenge.
+Teaming up with the talented [Natali Talevska](https://www.linkedin.com/in/natali-talevska/), whose design expertise brought our vision to life, and [Marko Spasenovski](https://www.linkedin.com/in/marko-spasenovski/), the coding virtuoso, who, alongside me, brought functionality to every pixel, we embarked on a mission to elevate the concept of fast food in the digital sphere.
 
-Each day brought new challenges, but we tackled them head-on, leveraging our
-problem-solving skills and staying true to industry best practices. As we neared
-the end of the workshop, the adrenaline peaked, and we polished every pixel and
-line of code.
+Facing challenges head-on, we honed our problem-solving skills and adhered to the highest standards of web development. With each passing day, our excitement grew, fueled by the prospect of bringing Jollybyte to life on the digital canvas.
 
-In the end, our hard work paid off, and we proudly claimed the first-place win.
-It was a testament to our dedication, passion, and seamless teamwork.
+Our efforts were rewarded with success, a testament to our unwavering dedication and seamless teamwork. Join us on this thrilling journey as we invite you to experience the magic of Jollybyte firsthand.
