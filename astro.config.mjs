@@ -3,11 +3,25 @@ import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import addClasses from "rehype-add-classes";
+import astroExpressiveCode from "astro-expressive-code";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://vaskopavic.com",
-  integrations: [tailwind(), react(), sitemap()],
+  integrations: [
+    tailwind(),
+    react(),
+    sitemap(),
+    astroExpressiveCode({
+      themes: ["dracula"],
+      styleOverrides: {
+        borderRadius: "0.75rem",
+        frames: {
+          shadowColor: "#124",
+        },
+      },
+    }),
+  ],
   markdown: {
     rehypePlugins: [
       [

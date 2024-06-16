@@ -39,12 +39,8 @@
   img {
     content-visibility: auto;
   }
+}
 
-  pre {
-    @apply p-4 mb-6 rounded-xl border border-slate-300 dark:border-zinc-700;
-  }
-
-  pre > code {
-    @apply whitespace-pre-wrap;
-  }
+.expressive-code {
+  @apply mb-6;
 }
