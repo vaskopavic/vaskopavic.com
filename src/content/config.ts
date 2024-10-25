@@ -21,7 +21,7 @@ const projectsCollection = defineCollection({
       coverAlt: z.string(),
       category: z.string(),
       previewUrl: z.string(),
-      sourceUrl: z.string(),
+      sourceUrl: z.string().optional(),
       createdAt: z.number(),
     }),
 });

@@ -46,22 +46,30 @@ const { Content } = await post.render();
   </div>
   <div class="flex items-center gap-2">
     <h1 class="text-4xl my-2 mr-2">{post.data.title}</h1>
-    <a
-      href={post.data.previewUrl}
-      target="_blank"
-      aria-label="Preview website"
-      class="hover:text-accent dark:hover:text-accent-dark text-2xl"
-    >
-      <IoGlobeOutline />
-    </a>
-    <a
-      href={post.data.sourceUrl}
-      target="_blank"
-      aria-label="Source code"
-      class="hover:text-accent dark:hover:text-accent-dark text-2xl"
-    >
-      <IoLogoGithub />
-    </a>
+    {
+      post.data.previewUrl && (
+        <a
+          href={post.data.previewUrl}
+          target="_blank"
+          aria-label="Preview website"
+          class="hover:text-accent dark:hover:text-accent-dark text-2xl"
+        >
+          <IoGlobeOutline />
+        </a>
+      )
+    }
+    {
+      post.data.sourceUrl && (
+        <a
+          href={post.data.sourceUrl}
+          target="_blank"
+          aria-label="Source code"
+          class="hover:text-accent dark:hover:text-accent-dark text-2xl"
+        >
+          <IoLogoGithub />
+        </a>
+      )
+    }
   </div>
   <div class="font-light text-justify">{post.data.description}</div>
   <hr class="border-zinc-400 my-4" />
